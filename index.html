@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservas Admin</title>
+  <link rel="shortcut icon" href="/favicon-32x32.png">
+ 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style.css">
+
+</head>
+<body class="bg-light container">
+  <h1 class="display-4 text-primary">RESERVA DE CANCHA</h1>
+  <main>
+     <!--  SECCION DATOS DE LA RESERVA -->
+    <section class="row mt-4">
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Datos de la reserva</h3>
+
+          </div>
+          <div class="card-body">
+            <form class="row" id="formCabecera">
+              <div class="form-group col-md-4">
+                <label for=" ">Nombre y Apellido</label>
+                <input type="text" class="form-control" placeholder="Ingrese Nombre" id="inputNombre">
+              </div>
+              
+              <div class="form-group col-md-4">
+                <label for="" >DNI / CUIT</label>
+                <input type="text" class="form-control" placeholder="Ingrese DNI o CUIT" id="InputDocumento">
+              </div>
+ 
+              <div class="form-group col-md-4">
+                <label for="" >Nro: Reserva</label>
+                <input type="number" class="form-control" placeholder="Ingrese nº" id="inputNro">
+              </div>
+
+              <div class="form-group col-md-4">
+                <label for="" >Nº de Telefono</label>
+                <input type="number" class="form-control" placeholder="Ingrese telefono de contacto" id="inputTelefono">
+              </div>
+
+              <div class="form-group col-md-4">
+                <label for="" >Fecha de reserva</label>
+                <input type="date" class="form-control" placeholder="dd/mm/aa" id="inputFecha">
+              </div>
+
+              <div class="form-group col-md-4">
+                <label for="" >Hora de reserva</label>
+                <input type="time" class="form-control" placeholder="hh:mm" id="inputHora">
+              </div>
+            </form  > 
+            
+            <div class="col mt-4">
+              <button class="btn btn-primary btn-lg " id="btnSiguiente">Siguiente</button>
+            </div>
+
+          </div>
+        </div>  
+
+      </div>
+    </section>
+    <!--  SECCION DE PRODUCTOS DE LA RESERVA -->
+    <section class="row mt-4" id="productos">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <form class="row" id="formDetalle">
+               
+              
+              <div class="form-group col-md-3">
+                <label for="">Descripcion</label>
+                <select id="selectDescripcion" class="form-control">
+                  <option value="0">-- Seleccione</option>
+                  
+                </select>
+              </div>
+              
+              <div class="form-group col-md-2">
+                <label for="">Cantidad</label>
+                <input type="number" class="form-control" id="inputCantidad">
+              </div>
+              
+              <div class="form-group col-md-2">
+                <label for="">P. Unitario</label>
+                <input type="number" class="form-control" id="inputPunitario">
+              </div>
+
+              <div class="form-group col-md-2">
+                <label for="">% Desc.</label>
+                <input type="number" class="form-control" id="inputDescuento">
+              </div>
+
+              <div class="form-group col-md-2">
+                <label for="">P. Total</label>
+                <input type="number" class="form-control" id="inputPtotal">
+              </div>
+              
+              <div class="form-group col-md-1 contenedor-btn" id="btnAgregarProducto">
+                <button type="submit" class="btn btn-warning">Agregar</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="col mt-4">
+        <button class="btn btn-primary btn-lg " id="btnGuardar">Guardar Reserva</button>
+      </div>
+
+    </section>
+
+  <!-- SECCION TABLA DE ITEMS QUE SE AGREGAN PARA LA RESERVA -->
+    <section class="row mt-4" id="detalleProductos">
+      <div class="col">
+        <table class="table text-center">
+          <thead>
+            <tr>
+              <th>Cantidad</th>
+              <th>Descripcion</th>
+              <th>P. Unitario</th>
+              <th>P. Total</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="cuerpoTabla">
+
+          </tbody>
+
+        </table>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <script src="/js/crud.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
+
+

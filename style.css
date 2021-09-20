@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+}
+
+.contenedor-btn {
+  align-items: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#btnguardar {
+  display: flex;
+  justify-content: center;
+}
+
+#btnSiguiente {
+  display: flex;
+  align-items:flex-end;
+
+}
+
+#detalleProductos{
+  display: none;
+}
+
+#productos{
+  display: none;
+}
+
+#btnGuardar{
+  display: none;
+}
