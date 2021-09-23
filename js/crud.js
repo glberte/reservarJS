@@ -25,7 +25,8 @@ let reservas = [];
 let arregloDetalle = [];
 
 // Creando el Array de los items a ver en la tabla
-let arregloProductos = [{id: 1, nombre: "Cancha Tennis 1", precio: 1000},
+let arregloProductos = [];
+/*[{id: 1, nombre: "Cancha Tennis 1", precio: 1000},
 {id: 2, nombre: "Cancha Tenis 2", precio: 1000},
 {id: 3, nombre: "Cancha Tenis 3", precio: 1000},
 {id: 4, nombre: "Cancha Tenis 4", precio: 1000},
@@ -35,7 +36,8 @@ let arregloProductos = [{id: 1, nombre: "Cancha Tennis 1", precio: 1000},
 {id: 8, nombre: "Pelota Head x 4", precio: 600},
 {id: 9, nombre: "Seña", precio: 300},
 {id: 10, nombre: "Pago Total", precio: 0},
-];
+];*/
+
 
 //funcion para completar la lista de productos, recorremos el array
 const llenarProductos = () => {
@@ -217,5 +219,14 @@ inputPunitario.onchange = () => {
 }; 
 
 
+// Implementando AJAX con el archivo de productos.json
+//products = [];
 
+window.onload = () => {
+  $.get("/js/productos.json", function(data) {
+    arregloProductos = [...data];
+    //console.log(arregloProductos);
+    llenarProductos( arregloProductos, 'product');
+  })
+}
 

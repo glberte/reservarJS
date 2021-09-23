@@ -1,0 +1,34 @@
+[
+
+ {"id": 1,
+  "nombre": "Cancha Tennis 1", 
+  "precio": 1000},
+  
+  {"id": 2,
+   "nombre": "Cancha Tennis 2", 
+   "precio": 1000},
+  
+   {"id": 3,
+   "nombre": "Pelota Penn", 
+   "precio": 400},
+   
+   {"id": 4,
+   "nombre": "Pelota Head", 
+   "precio": 400},
+   
+   {"id": 5,
+   "nombre": "Tubo Pelotas Penn x 4", 
+   "precio": 1200},
+   
+   {"id": 6,
+   "nombre": "Tubo Pelotas Head x 4", 
+   "precio": 1200},
+   
+   {"id": 7,
+   "nombre": "Seña", 
+   "precio": 300},
+   
+   {"id": 8,
+   "nombre": "Pago Total", 
+   "precio": 0}
+]
